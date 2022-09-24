@@ -1,7 +1,7 @@
 -- Active: 1663625309675@@147.182.242.232@3306@budgit
 CREATE TABLE IF NOT EXISTS transactions(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'transactionId',
-  userId VARCHAR(255) NOT NULL COMMENT 'userIf this transaction belongs to',
+  userId VARCHAR(255) NOT NULL COMMENT 'userId this transaction belongs to',
   bankAccountId INT COMMENT 'bankAccountId this transaction is in',
   categoryId INT COMMENT 'categoryId this transaction is in',
   datePosted DATE NOT NULL COMMENT 'DATE this transaction was posted',
@@ -12,5 +12,11 @@ CREATE TABLE IF NOT EXISTS transactions(
 
 CREATE TABLE IF NOT EXISTS categories(
   id INT NOT NULL PRIMARY KEY COMMENT 'categoryId',
-  name 
+  userId VARCHAR(255) NOT NULL COMMENT 'userId this category belongs to',
+  groupId VARCHAR(255) COMMENT 'groupId this category belongs to',
+  name VARCHAR(255) NOT NULL COMMENT 'category name',
+  description VARCHAR(255) COMMENT 'category description',
+  assignedAmount DECIMAL(19,4) COMMENT 'amount assigned to this budget category',
+  targetAmount DECIMAL(19,4) COMMENT 'amount that should be assigned to this category',
+  targetMax DECIMAL(19,4) COMMENT ''
 )
