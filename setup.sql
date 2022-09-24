@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS transactions(
   amount DECIMAL(19,4) COMMENT 'amount of this transaction, positive is income',
   payee VARCHAR(255) COMMENT 'entity this transaction is with',
   description VARCHAR(255) COMMENT 'comments/notes/description'
-);
+) DEFAULT CHARSET utf8;
