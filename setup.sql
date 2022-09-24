@@ -27,6 +27,6 @@ CREATE TABLE IF NOT EXISTS categories(
 CREATE TABLE IF NOT EXISTS groups(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'groupId',
   userId VARCHAR(255) NOT NULL COMMENT 'userId this group belongs to',
-  name VARCHAR(255) NOT NULL COMMENT 'name of this group',
-  description VARCHAR(255) COMMENT 'description of this group'
+  name VARCHAR(255) NOT NULL COMMENT 'group name',
+  description VARCHAR(255) COMMENT 'group description'
 ) DEFAULT CHARSET utf8;
