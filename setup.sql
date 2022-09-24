@@ -21,5 +21,5 @@ CREATE TABLE IF NOT EXISTS categories(
   targetMax DECIMAL(19,4) COMMENT 'maximum amount that should be assigned',
   targetInterval ENUM('days', 'months') COMMENT 'the unit that the target frequency is updated',
   targetFrequency INT COMMENT 'the frequency, in targetIntervals the target is updated',
-  targetDate DATE COMMENT 'the date that the target is first updated',
+  targetDate DATE COMMENT 'the date that the target is first updated'
 ) DEFAULT CHARSET utf8;
