@@ -39,3 +39,10 @@ CREATE TABLE IF NOT EXISTS accounts(
   email varchar(255) COMMENT 'User Email',
   picture varchar(255) COMMENT 'User Picture'
 ) default charset utf8 COMMENT '';
+
+CREATE TABLE IF NOT EXISTS bankAccounts(
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'bankAccountId',
+  userId VARCHAR(255) NOT NULL COMMENT 'userId this account belongs to',
+  name VARCHAR(255) NOT NULL COMMENT 'the name of this account',
+  description VARCHAR(255) COMMENT 'description of this account'
+)
