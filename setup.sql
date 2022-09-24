@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS transactions(
 ) DEFAULT CHARSET utf8;
 
 CREATE TABLE IF NOT EXISTS categories(
-  id INT NOT NULL PRIMARY KEY COMMENT 'categoryId',
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'categoryId',
   userId VARCHAR(255) NOT NULL COMMENT 'userId this category belongs to',
   groupId VARCHAR(255) COMMENT 'groupId this category belongs to',
   name VARCHAR(255) NOT NULL COMMENT 'category name',
@@ -23,3 +23,5 @@ CREATE TABLE IF NOT EXISTS categories(
   targetFrequency INT COMMENT 'the frequency, in targetIntervals the target is updated',
   targetDate DATE COMMENT 'the date that the target is first updated'
 ) DEFAULT CHARSET utf8;
+
+DROP TABLE categories;
