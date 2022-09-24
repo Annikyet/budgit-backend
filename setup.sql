@@ -16,7 +16,10 @@ CREATE TABLE IF NOT EXISTS categories(
   groupId VARCHAR(255) COMMENT 'groupId this category belongs to',
   name VARCHAR(255) NOT NULL COMMENT 'category name',
   description VARCHAR(255) COMMENT 'category description',
-  assignedAmount DECIMAL(19,4) COMMENT 'amount assigned to this budget category',
+  assignedAmount DECIMAL(19,4 DEFAULT 0 COMMENT 'amount assigned to this budget category',
   targetAmount DECIMAL(19,4) COMMENT 'amount that should be assigned to this category',
-  targetMax DECIMAL(19,4) COMMENT ''
-)
+  targetMax DECIMAL(19,4) COMMENT 'maximum amount that should be assigned',
+  targetInterval ENUM('days', 'months') COMMENT 'the unit that the target frequency is updated',
+  targetFrequency INT COMMENT 'the frequency, in targetIntervals the target is updated',
+  targetDate DATE COMMENT 'the date that the target is first updated',
+) DEFAULT CHARSET utf8;
