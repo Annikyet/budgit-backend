@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS categories(
   targetDate DATE COMMENT 'the date that the target is first updated'
 ) DEFAULT CHARSET utf8;
 
-CREATE TABLE IF NOT EXISTS groups(
+CREATE TABLE IF NOT EXISTS categoryGroups(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'groupId',
   userId VARCHAR(255) NOT NULL COMMENT 'userId this group belongs to',
   name VARCHAR(255) NOT NULL COMMENT 'group name',
