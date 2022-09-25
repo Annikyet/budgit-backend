@@ -7,12 +7,12 @@ package main
 // )
 
 type transaction struct {
-	ID            int
-	UserId        string
-	BankAccountId int
-	CategoryId    int
-	Date          string // should be a date type... later
-	Amount        int    // should be a decimal type... later
-	Payee         string
-	Description   string
+	ID            int    `json:"id"`
+	UserId        string `json:"userId"`
+	BankAccountId int    `json:"bankAccountId"`
+	CategoryId    int    `json:"categoryId"`
+	Date          string `json:"date"`   // should be a date type... later
+	Amount        int    `json:"amount"` // should be a decimal type... later
+	Payee         string `json:"payee"`
+	Description   string `json:"description"`
 }
